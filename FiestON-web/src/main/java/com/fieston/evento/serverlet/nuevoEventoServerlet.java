@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Rodrigo
  */
-//@WebServlet(name = "nuevoEventoServerlet", urlPatterns = {"/nuevoEventoServerlet"})
+@WebServlet(name = "nuevoEventoServerlet", urlPatterns = {"/nuevoEvento"})
 public class nuevoEventoServerlet extends HttpServlet {
 
     /**
@@ -46,7 +46,7 @@ public class nuevoEventoServerlet extends HttpServlet {
             String decoracion = request.getParameter("decoracion");
             response.sendRedirect("index_1.html");
             
-        }atch (Exception e) {
+        }catch (Exception e) {
             System.out.println(e.toString());
 
         }
