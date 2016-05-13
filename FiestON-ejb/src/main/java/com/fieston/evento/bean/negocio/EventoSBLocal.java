@@ -5,6 +5,7 @@
  */
 package com.fieston.evento.bean.negocio;
 
+import java.util.Date;
 import javax.ejb.Local;
 
 /**
@@ -13,5 +14,6 @@ import javax.ejb.Local;
  */
 @Local
 public interface EventoSBLocal {
+    public void agregarEvento(Date fecha, int cantInvitadosMayores, int cantInvitadosMenores, Date fechaSena, int nroRecibo, String decoracion);
     
 }

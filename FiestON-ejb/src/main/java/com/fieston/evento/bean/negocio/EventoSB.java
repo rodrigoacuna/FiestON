@@ -5,6 +5,9 @@
  */
 package com.fieston.evento.bean.negocio;
 
+import com.fieston.evento.bean.persistencia.EventoPersistenciaSB;
+import com.fieston.evento.entity.Evento;
+import java.util.Date;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
@@ -19,6 +22,20 @@ public class EventoSB implements EventoSBLocal {
     // "Insert Code > Add Business Method")
     
     @EJB 
-    EventoSBLocal eSBLocal;
+    EventoPersistenciaSB eSBLocal;
+    
+    @Override
+    public void agregarEvento(Date fecha, int cantInvitadosMayores, int cantInvitadosMenores, Date fechaSena, int nroRecibo, String decoracion){
+    Evento evento = new Evento();
+    evento.setFecha(fecha);
+    evento.setCantInvitadosMayores(cantInvitadosMayores);
+    evento.setCantInvitadosMenores(cantInvitadosMenores);
+    evento.setFechaSena(fechaSena);
+    evento.setNroRecibo(nroRecibo);
+    evento.setDecoracion(decoracion);
+        //sevento = new Evento(fecha, cantInvitadosMayores, cantInvitadosMenores, fechaSena, nroRecibo, decoracion);
+    eSBLocal.agregarEvento(evento);
+    
+    }
     
 }
