@@ -366,6 +366,8 @@
 
 
                                         <!-- Smart Wizard -->
+                                <form action="nuevoEvento" method="POST">
+
                                         <p>Mediantes las etapas completara los datos para el ingreso de un nuevo Evento</p>
                                         <div id="wizard" class="form_wizard wizard_horizontal">
                                             <ul class="wizard_steps">
@@ -406,7 +408,6 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                            <form action="nuuevoEvento" method="POST">
                                             <div id="step-1">
 
                                                 <div class="left_col" role="main">
@@ -431,8 +432,7 @@
                                                                                         <div class="mask">
                                                                                             <p>EMPRESARIAL</p>
                                                                                             <div class="tools tools-bottom">
-                                                                                                <a href="#"><i class="fa fa-check-square-o"></i></a>
-
+                                                                                                <a href="#step-2"><i class="fa fa-check-square-o"></i></a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -451,7 +451,7 @@
                                                                                         <div class="mask">
                                                                                             <p>CASAMIENTO</p>
                                                                                             <div class="tools tools-bottom">
-                                                                                                <a href="#"><i class="fa fa-check-square-o"></i></a>
+                                                                                                <a href="#step-2"><i class="fa fa-check-square-o"></i></a>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -469,7 +469,9 @@
                                                                                         <img style="width: 100%; display: block;" src="images/cumple15.jpg" alt="image" />
                                                                                         <div class="mask">
                                                                                             <p>CUMPLE 15</p>
-                                                                                            
+                                                                                            <div class="tools tools-bottom">
+                                                                                                <a href="#step-2"><i class="fa fa-check-square-o"></i></a>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="caption">
@@ -487,7 +489,9 @@
                                                                                         <img style="width: 100%; display: block;" src="images/fiestachica.jpg" alt="image" />
                                                                                         <div class="mask">
                                                                                             <p>FIESTA CHICA</p>
-                                                                                            
+                                                                                            <div class="tools tools-bottom">
+                                                                                                <a href="#step-2"><i class="fa fa-check-square-o"></i></a>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="caption">
@@ -515,22 +519,42 @@
                                                     En esta etapa se debe de completar los datos del Cliente.
                                                 </p>
                                                 <div class="x_content">
-                                                    <form class="form-horizontal form-label-left">
-                                                        <div class="form-group">
-                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre/Apellido Novio <span class="required">*</span>
+                                                   <!-- <form class="form-horizontal form-label-left">-->
+                                                       
+                                                         <div class="form-group">
+                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre/Apellido Novio: <span class="required">*</span>
                                                             </label>
                                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                <input type="text" id="novio" required="required" class="form-control col-md-7 col-xs-12">
+                                                                <input type="text" name=" nombrenovio" id="novio" required="required" class="form-control col-md-7 col-xs-12">
                                                             </div>
                                                         </div>
-
+                                                         
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CI Novio <span class="required">*</span>
+                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">CI Novio: <span class="required">*</span>
                                                             </label>
                                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                <input type="text" id="novio" required="required" class="form-control col-md-7 col-xs-12">
+                                                                <input name ="cinovio" type="text" class="form-control col-md-6 col-xs-12" data-inputmask="'mask': '9.999.999-9'">
+                                                                
                                                             </div>
                                                         </div>
+                                                         
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha nac. Novio: <span class="required">*</span>
+                                                            </label>
+                                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                <input name ="fechanacnovio" type="text" class="form-control col-md-7 col-xs-12" data-inputmask="'mask': '99/99/9999'">
+                                                             </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                          <label class="control-label col-md-3 col-sm-3 col-xs-3">Date Mask</label>
+                                                          <div class="col-md-9 col-sm-9 col-xs-9">
+                                                            <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'">
+                                                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                                                          </div>
+                                                        </div>
+                                                        
+                                                        
                                                         <div class="form-group">
                                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">F.Nac Novio <span class="required">*</span>
                                                             </label>
@@ -574,8 +598,7 @@
                                                                 <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                                                             </div>
                                                         </div>
-
-                                                    </form>
+                                                   <!-- </form>-->
                                                 </div>
                                             </div>
                                             <div id="step-3">
@@ -584,12 +607,13 @@
                                                     En esta etapa se debe de completar los datos del Evento.
                                                 </p>
                                                 <div class="x_content">
-                                                    <form class="form-horizontal form-label-left">
+                                                    <!--<form name ="datoEvento" class="form-horizontal form-label-left">-->
                                                         <div class="form-group">
                                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Fecha del Evento <span class="required">*</span>
                                                             </label>
                                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                <input type="text" name=" fechaevento" id="novio" required="required" class="form-control col-md-7 col-xs-12">
+                                                                <input name ="fechaevento" type="text" class="form-control col-md-7 col-xs-12" data-inputmask="'mask': '99/99/9999'">
+                                                              <!--  <input type="text" name=" fechaevento" id="novio" required="required" class="form-control col-md-7 col-xs-12">-->
                                                             </div>
                                                         </div>
 
@@ -623,10 +647,12 @@
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Fecha seña<span class="required">*</span>
+                                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Fecha se&ntilde;a<span class="required">*</span>
                                                             </label>
                                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                                <input type="text" name ="fechasena" id="last-name" name="novia" required="required" class="form-control col-md-7 col-xs-12">
+                                                                    <input name ="fechaesena" type="text" class="form-control col-md-7 col-xs-12" data-inputmask="'mask': '99/99/9999'">
+
+                                                                <!--<input type="text" name ="fechasena" id="last-name" name="novia" required="required" class="form-control col-md-7 col-xs-12">-->
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -646,7 +672,7 @@
                                                         </div>
 
 
-                                                    </form>
+                                                   <!-- </form>-->
                                                 </div>
                                             </div>
                                             <div id="step-4">
@@ -663,6 +689,7 @@
                                                     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                                 </p>
                                             </div>
+                                            <!--<input type="submit" class="btn btn-default submit" value ="CONFIRMAR DATOS"/>  -->
                                         </form>
 
 
@@ -709,7 +736,8 @@
         <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
         <!-- icheck -->
         <script src="js/icheck/icheck.min.js"></script>
-
+         <!-- input mask -->
+        <script src="js/input_mask/jquery.inputmask.js"></script>
         <script src="js/custom.js"></script>
         <!-- form wizard -->
         <script type="text/javascript" src="js/wizard/jquery.smartWizard.js"></script>
@@ -734,6 +762,13 @@
 
             });
         </script>
+         <!-- input_mask -->
+        <script>
+          $(document).ready(function() {
+            $(":input").inputmask();
+          });
+        </script>
+        <!-- /input mask -->
 
     </body>
 

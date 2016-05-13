@@ -49,6 +49,7 @@ public class validarUsrServlet extends HttpServlet {
             } else {
                 //Si no existe
                 response.sendRedirect("login.html");
+                //request.setAttribute("result", "ERRORRRR");
             }
         } catch (Exception e) {
             System.out.println(e.toString());

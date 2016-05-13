@@ -5,8 +5,13 @@
  */
 package com.fieston.evento.serverlet;
 
+import com.fieston.evento.bean.negocio.EventoSB;
+import com.fieston.evento.bean.negocio.EventoSBLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +25,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "nuevoEventoServerlet", urlPatterns = {"/nuevoEvento"})
 public class nuevoEventoServerlet extends HttpServlet {
 
+    @EJB
+    EventoSBLocal eSB;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -36,15 +43,25 @@ public class nuevoEventoServerlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             
             
-            String fechaevento = request.getParameter("fechaevento");
-            String mayores = request.getParameter("mayores");
-            String menores = request.getParameter("menores");
+             String fechaeventotxt = request.getParameter("fechaevento");
+            SimpleDateFormat formatoDelTexto = new SimpleDateFormat("dd/mm/yyyy");
+            Date fechaevento = formatoDelTexto.parse(fechaeventotxt);
+            
+            int mayores = Integer.parseInt(request.getParameter("mayores"));
+            int menores = Integer.parseInt(request.getParameter("menores"));
             String catering = request.getParameter("catering");
             String menu = request.getParameter("menu");
-            String fechasena = request.getParameter("fechasena");
-            String nrorecibo = request.getParameter("nrorecibo");
+            
+            // String fechasenatxt = request.getParameter("fechasena");
+            //SimpleDateFormat formatoDelTexto = new SimpleDateFormat("dd/mm/yyyy");
+            Date fechasena =null;// formatoDelTexto.parse(fechaeventotxt);
+            
+            int nrorecibo = 23234234; //equest.getParameter("nrorecibo");
             String decoracion = request.getParameter("decoracion");
-            response.sendRedirect("index_1.html");
+        
+           eSB.agregarEvento(fechaevento, mayores, menores, fechasena, nrorecibo, decoracion);
+            
+            response.sendRedirect("login.html");
             
         }catch (Exception e) {
             System.out.println(e.toString());
