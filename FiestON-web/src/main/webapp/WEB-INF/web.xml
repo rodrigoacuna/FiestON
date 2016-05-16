@@ -17,6 +17,10 @@
         <servlet-name>validarUsr</servlet-name>
         <servlet-class>com.fieston.login.servlets.validarUsrServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AgregarEventoSeverlet</servlet-name>
+        <servlet-class>com.fieston.evento.serverlet.AgregarEventoSeverlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -28,6 +32,10 @@
     <servlet-mapping>
         <servlet-name>validarUsr</servlet-name>
         <url-pattern>/validarUsr</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AgregarEventoSeverlet</servlet-name>
+        <url-pattern>/AgregarEventoSeverlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -5,7 +5,6 @@
  */
 package com.fieston.evento.serverlet;
 
-
 import com.fieston.evento.bean.negocio.EventoSBLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,19 +12,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Rodrigo*/
- 
-@WebServlet(name = "nuevoEventoServerlet", urlPatterns = {"/nuevoEvento"})
-public class nuevoEventoServerlet extends HttpServlet {
+ * @author Rodrigo
+ */
+public class AgregarEventoSeverlet extends HttpServlet {
 
-    @EJB
+     @EJB
     EventoSBLocal eSB;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +37,7 @@ public class nuevoEventoServerlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            
-            
-             String fechaeventotxt = "01/01/2016"; //request.getParameter("fechaevento");
+            String fechaeventotxt = "01/01/2016"; //request.getParameter("fechaevento");
             SimpleDateFormat formatoDelTexto = new SimpleDateFormat("dd/mm/yyyy");
             Date fechaevento = formatoDelTexto.parse(fechaeventotxt);
             
@@ -67,7 +61,8 @@ public class nuevoEventoServerlet extends HttpServlet {
             System.out.println("EEEERRROOOORRRRR " + e.toString());
 
         }
-    }
+        }
+   
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
