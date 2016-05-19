@@ -23,8 +23,8 @@ import javax.ws.rs.Path;
  *
  * @author Rodrigo
  */
-@Stateless()
-@ApplicationPath("/resources")
+
+@ApplicationPath("resources")
 @Path("usuario")
 
 public class UsuariosWS {

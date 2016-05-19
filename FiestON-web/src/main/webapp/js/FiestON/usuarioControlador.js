@@ -7,13 +7,13 @@ var usuariojs = angular.module('usuariojs',[]) ;
 
 usuariojs.controller('listaUsuarios', */
 
-function usuarioControlador($scope){
+function usuarioControlador($scope,$){
     $scope.usuarios=[
         {usu:"rodri_usuario",clave:"rodri",mail:"mail@mail.com"},
         {usu:"cateaaaa",clave:"cata",mail:"cata@mail.com"},
         {usu:"nicooooo",clave:"nico",mail:"nico@mail.com"}
     ];
-    $scope.datos = callWebservice(localhost/asd/usuario)
+  datos = callWebservice(localhost/asd/usuario)
             
 };
 
