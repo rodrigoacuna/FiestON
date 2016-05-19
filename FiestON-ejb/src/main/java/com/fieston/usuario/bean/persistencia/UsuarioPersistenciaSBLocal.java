@@ -6,6 +6,7 @@
 package com.fieston.usuario.bean.persistencia;
 
 import com.fieston.usuario.entity.Usuario;
+import java.util.ArrayList;
 import javax.ejb.Local;
 
 /**
@@ -16,4 +17,6 @@ import javax.ejb.Local;
 public interface UsuarioPersistenciaSBLocal {
      public void agregarUsuario(Usuario usuario);
      public boolean existeUsuario(Usuario usuario);
+     public ArrayList<Usuario> retornoUsuarios();
+
 }

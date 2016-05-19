@@ -19,7 +19,7 @@
     </servlet>
     <servlet>
         <servlet-name>AgregarEventoSeverlet</servlet-name>
-        <servlet-class>com.fieston.evento.serverlet.AgregarEventoSeverlet</servlet-class>
+        <servlet-class>com.fieston.evento.serverlet.AgregarEventosSeverlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>

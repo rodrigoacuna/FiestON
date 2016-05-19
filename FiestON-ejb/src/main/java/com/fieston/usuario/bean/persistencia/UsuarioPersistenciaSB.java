@@ -7,6 +7,7 @@ package com.fieston.usuario.bean.persistencia;
 
 import basededatos.UsuariosBD;
 import com.fieston.usuario.entity.Usuario;
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
@@ -54,6 +55,10 @@ public class UsuarioPersistenciaSB implements UsuarioPersistenciaSBLocal {
     public boolean existeUsuario(Usuario usuario){
         return lista.existeUSuario(usuario);
 
+    }
+     @Override
+    public ArrayList<Usuario> retornoUsuarios(){
+        return lista.getUsuarios();
     }
     
     

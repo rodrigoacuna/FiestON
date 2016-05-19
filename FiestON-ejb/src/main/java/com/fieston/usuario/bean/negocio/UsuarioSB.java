@@ -5,11 +5,10 @@
  */
 package com.fieston.usuario.bean.negocio;
 
-import basededatos.UsuariosBD;
-import com.fieston.usuario.bean.persistencia.UsuarioPersistenciaSB;
 import com.fieston.usuario.bean.persistencia.UsuarioPersistenciaSBLocal;
 import com.fieston.usuario.entity.Usuario;
 import javax.ejb.EJB;
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 /**
@@ -17,6 +16,7 @@ import javax.ejb.Stateless;
  * @author Rodrigo
  */
 @Stateless
+@LocalBean
 public class UsuarioSB implements UsuarioSBLocal {
 
     // Add business logic below. (Right-click in editor and choose

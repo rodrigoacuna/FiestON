@@ -9,6 +9,7 @@ import com.fieston.usuario.bean.negocio.UsuarioSBLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,7 +49,10 @@ public class validarUsrServlet extends HttpServlet {
                 response.sendRedirect("index_1.html");
             } else {
                 //Si no existe
-                response.sendRedirect("login.html");
+                 request.setAttribute("error", "Usuario y/o contraseña incorrectos");
+              RequestDispatcher a = request.getRequestDispatcher("login.jsp");
+              a.forward(request, response);
+                //response.sendRedirect("login.html");
                 //request.setAttribute("result", "ERRORRRR");
             }
         } catch (Exception e) {

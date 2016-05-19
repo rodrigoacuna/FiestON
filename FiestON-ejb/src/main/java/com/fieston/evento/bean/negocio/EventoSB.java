@@ -26,15 +26,18 @@ public class EventoSB implements EventoSBLocal {
     
     @Override
     public void agregarEvento(Date fecha, int cantInvitadosMayores, int cantInvitadosMenores, Date fechaSena, int nroRecibo, String decoracion){
-    Evento evento = new Evento();
-    evento.setFecha(fecha);
+    
+        Evento evento = new Evento();
+    
+    evento.setFecha(null);
     evento.setCantInvitadosMayores(cantInvitadosMayores);
     evento.setCantInvitadosMenores(cantInvitadosMenores);
-    evento.setFechaSena(fechaSena);
+    evento.setFechaSena(null);
     evento.setNroRecibo(nroRecibo);
-    evento.setDecoracion(decoracion);
+    evento.setDecoracion("deoracion");
         //sevento = new Evento(fecha, cantInvitadosMayores, cantInvitadosMenores, fechaSena, nroRecibo, decoracion);
-    eSBLocal.agregarEvento(evento);
+    
+    //eSBLocal.agregarEvento(evento);
     
     }
     

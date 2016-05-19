@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Rodrigo
  */
-public class AgregarEventoSeverlet extends HttpServlet {
+public class AgregarEventosSeverlet extends HttpServlet {
 
      @EJB
     EventoSBLocal eSB;

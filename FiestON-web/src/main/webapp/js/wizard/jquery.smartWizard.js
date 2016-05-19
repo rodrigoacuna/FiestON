@@ -23,7 +23,7 @@ function SmartWizard(target, options) {
     this.buttons = {
         next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("btn btn-success"),
         previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("btn btn-primary"),
-        finish  : $('<input type="submit" class="btn btn-default submit" href="nuevoEventoServerlet" value ="INGRESAAAAAAR"/>')
+        finish  : $('<input type="submit" class="btn btn-default submit" href="nuevoEventoServerlet" value ="CONFIRMAR"/>')
 //<a>'+options.labelFinish+'</a>').attr("href","/index.html").addClass("btn btn-default")
     };
 

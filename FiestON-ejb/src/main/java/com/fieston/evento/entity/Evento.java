@@ -20,7 +20,7 @@ public class Evento {
     private Date fechaSena;
     private int nroRecibo;
     //Decoracion decoracion;
-    String decoracion;
+    private String decoracion;
 
     public Evento() {
     }
@@ -84,7 +84,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" + "fecha=" + fecha + '}';
+        return "Evento{" + "Mayores=" + cantInvitadosMayores + '}';
     }
     
         

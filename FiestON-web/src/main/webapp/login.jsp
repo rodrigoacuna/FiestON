@@ -44,7 +44,7 @@
                                             </head>
 
                                             <body style="background:#F7F7F7;">
-
+                                            
                                                 <div class="">
                                                     <a class="hiddenanchor" id="toregister"></a>
                                                     <a class="hiddenanchor" id="tologin"></a>
@@ -55,15 +55,21 @@
                                                                 <form action="validarUsr" method="POST">
                                                                     <h1>Login FiestOn!</h1>
                                                                     <div>
-                                                                        <input name ="usu" type="text" class="form-control" placeholder="Username" required="" />
+                                                                        <input name ="usu" type="text" class="form-control" placeholder="Usuario" required="" />
                                                                     </div>
                                                                     <div>
-                                                                        <input name="pas" type="password" class="form-control" placeholder="Password" required="" />
+                                                                        <input name="pas" type="password" class="form-control" placeholder="Contrasena" required="" />
                                                                     </div>
                                                                     <div>
                                                                         <!-- <input name="submit" type="submit" value ="LOOOOG"/>-->
-                                                                        <input type="submit" class="btn btn-default submit" value ="Ingresar"/>
-                                                                        <a class="reset_pass" href="#">No recuerda su contraseña?</a>
+                                                                        
+                                                                        <%String errores = (String)request.getAttribute("error");
+                                                                       if (errores!=null){%>
+                                                                       <p style="color: red">
+                                                                           <%=errores%>
+                                                                         </p>  
+                                                                         <%}%><input type="submit" class="btn btn-default submit" value ="Ingresar"/>
+                                                                        <!-- <a class="reset_pass" href="#">No recuerda su contraseña?</a> -->
                                                                     </div>
                                                                     <div class="clearfix"></div>
                                                                     
@@ -78,7 +84,7 @@
                                                                         <div>
                                                                             <h1><i class="fa fa-paw" style="font-size: 26px;"></i> FiestON uy!</h1>
 
-                                                                            <p>©2015 All Rights Reserved. FiestON!. Privacy and Terms</p>
+                                                                           <!-- <p>©2015 All Rights Reserved. FiestON!. Privacy and Terms</p> -->
                                                                         </div>
                                                                     </div>
                                                                 </form>
