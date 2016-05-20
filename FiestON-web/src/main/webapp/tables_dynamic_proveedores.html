@@ -13,7 +13,6 @@
   <!-- Bootstrap core CSS -->
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
   <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
 
@@ -365,7 +364,7 @@
                   </ul>
                   <div class="clearfix"></div>
                 </div>
-                  <div class="x_content" ng-controller="usuarioControlador">
+                  <div class="x_content" ng-controller="userController as ctrl">
                   <table id="example" class="table table-striped responsive-utilities jambo_table">
                     <thead>
                       <tr class="headings">
@@ -381,13 +380,13 @@
                     </thead>
 
                     <tbody>
-                        <tr class="even pointer" ng-repeat="usuario in usuarios">
+                        <tr class="even pointer" ng-repeat="usuario in ctrl.self.getUserArray()">
                         <td class="a-center ">
                           <input type="checkbox" class="tableflat">
                         </td>
-                        <td class=" ">{{usuario.usu}}</td>
-                        <td class=" ">{{usuario.clave}} </td>
-                        <td class=" ">{{usuario.mail}} <i class="success fa fa-long-arrow-up"></i>
+                        <td ng-class=" ">{{usuario.usu}}</td>
+                        <td ng-class=" ">{{usuario.clave}} </td>
+                        <td ng-class=" ">{{usuario.mail}} <i class="success fa fa-long-arrow-up"></i>
                         </td>
                         <td class=" last"><a href="#">View</a>
                         </td>
