@@ -3,14 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-angular.module('fiestion')
-        .controller('userController', ['$scope', function($scope){
+angular.module('fiestonApp',[]).controller('userController',['$scope','service', function($scope, servicio){
     
-        $scope.usuarios = [
-            {usu:"rodri_usuario",clave:"rodri",mail:"mail@mail.com"},
-            {usu:"cateaaaa",clave:"cata",mail:"cata@mail.com"},
-            {usu:"nicooooo",clave:"nico",mail:"nico@mail.com"}
-        ];
+    $scope.userList = [];
+    
+    function getUserList($scope, $http) {
+    $http.get('localhost:8080/fieston/api/services/getLisUser').
+        success(function(data) {
+            this.userList = data;
+        });
+    }
+    
+        /*$scope.userList = [
+            {usu:"rodri_usuario",clave:"rodri",mail:"mail@mail.com", isChecked:false},
+            {usu:"cateaaaa",clave:"cata",mail:"cata@mail.com", isChecked:true},
+            {usu:"nicooooo",clave:"nico",mail:"nico@mail.com", isChecked:false}
+        ];*/
     
     /*self.getUserArray = function(){
         return self.model.usuarios;
