@@ -3,19 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-angular.module('fiestion').controller('userController', ['$scope', function usuarioControlador($scope){
+angular.module('fiestion')
+        .controller('userController', ['$scope', function($scope){
     
-        self.model = {
-        usuarios:[
+        $scope.usuarios = [
             {usu:"rodri_usuario",clave:"rodri",mail:"mail@mail.com"},
             {usu:"cateaaaa",clave:"cata",mail:"cata@mail.com"},
             {usu:"nicooooo",clave:"nico",mail:"nico@mail.com"}
-        ]
-    };
+        ];
     
-    self.getUserArray = function(){
+    /*self.getUserArray = function(){
         return self.model.usuarios;
-    }
+    }*/
             
 }]);
 
